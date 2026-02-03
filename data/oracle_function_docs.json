@@ -1,0 +1,1402 @@
+{
+    "count": [
+        {
+            "function_signature": "COUNT(*) | COUNT(expr) | COUNT(DISTINCT expr)",
+            "description": "Return the number of rows matching the query (COUNT(*) counts rows; COUNT(expr) counts non-NULL expr values).",
+            "example": "SELECT COUNT(*) FROM emp;",
+            "example_result": "14"
+        }
+    ],
+    "max": [
+        {
+            "function_signature": "MAX(column)",
+            "description": "Return the maximum value in the given column.",
+            "example": "SELECT MAX(salary) FROM employees;",
+            "example_result": "30000"
+        }
+    ],
+    "min": [
+        {
+            "function_signature": "MIN(column)",
+            "description": "Return the minimum value in the given column.",
+            "example": "SELECT MIN(salary) FROM employees;",
+            "example_result": "10000"
+        }
+    ],
+    "avg": [
+        {
+            "function_signature": "AVG(column)",
+            "description": "Return the average (arithmetic mean) of non-NULL values in the column.",
+            "example": "SELECT AVG(salary) FROM employees;",
+            "example_result": "22500"
+        }
+    ],
+    "sum": [
+        {
+            "function_signature": "SUM(column)",
+            "description": "Return the sum of non-NULL numeric values in the column.",
+            "example": "SELECT SUM(salary) FROM employees;",
+            "example_result": "90000"
+        }
+    ],
+    "abs": [
+        {
+            "function_signature": "ABS(x)",
+            "description": "Return the absolute value of x.",
+            "example": "SELECT ABS(-17.4) FROM dual;",
+            "example_result": "17.4"
+        }
+    ],
+    "ceil": [
+        {
+            "function_signature": "CEIL(x)",
+            "description": "Return the smallest integer greater than or equal to x.",
+            "example": "SELECT CEIL(99.5) FROM dual;",
+            "example_result": "100"
+        }
+    ],
+    "floor": [
+        {
+            "function_signature": "FLOOR(x)",
+            "description": "Return the largest integer less than or equal to x.",
+            "example": "SELECT FLOOR(99.5) FROM dual;",
+            "example_result": "99"
+        }
+    ],
+    "round": [
+        {
+            "function_signature": "ROUND(x[, n])",
+            "description": "Round x to n decimal places (n defaults to 0).",
+            "example": "SELECT ROUND(2.345, 2) FROM dual;",
+            "example_result": "2.35"
+        }
+    ],
+    "trunc": [
+        {
+            "function_signature": "TRUNC(x[, n])",
+            "description": "Truncate x to n decimal places (n defaults to 0); for dates, TRUNC(date[, fmt]) truncates to the specified date precision.",
+            "example": "SELECT TRUNC(2.345, 2) FROM dual;",
+            "example_result": "2.34"
+        }
+    ],
+    "mod": [
+        {
+            "function_signature": "MOD(x, y)",
+            "description": "Return remainder of x divided by y.",
+            "example": "SELECT MOD(9, 4) FROM dual;",
+            "example_result": "1"
+        }
+    ],
+    "power": [
+        {
+            "function_signature": "POWER(x, y)",
+            "description": "Return x raised to the power y.",
+            "example": "SELECT POWER(2, 10) FROM dual;",
+            "example_result": "1024"
+        }
+    ],
+    "sqrt": [
+        {
+            "function_signature": "SQRT(x)",
+            "description": "Return the square root of x.",
+            "example": "SELECT SQRT(9) FROM dual;",
+            "example_result": "3"
+        }
+    ],
+    "exp": [
+        {
+            "function_signature": "EXP(x)",
+            "description": "Return e raised to the power x (natural exponential).",
+            "example": "SELECT EXP(1) FROM dual;",
+            "example_result": "2.71828182845905"
+        }
+    ],
+    "ln": [
+        {
+            "function_signature": "LN(x)",
+            "description": "Return the natural logarithm (base e) of x.",
+            "example": "SELECT LN(2) FROM dual;",
+            "example_result": "0.693147180559945"
+        }
+    ],
+    "log": [
+        {
+            "function_signature": "LOG(b, x)",
+            "description": "Return the logarithm of x with base b.",
+            "example": "SELECT LOG(2, 64) FROM dual;",
+            "example_result": "6"
+        }
+    ],
+    "greatest": [
+        {
+            "function_signature": "GREATEST(expr1, expr2, ...)",
+            "description": "Return the greatest (highest) value from the list of expressions, considering datatype ordering.",
+            "example": "SELECT GREATEST('oracle', 'oracle10G') FROM dual;",
+            "example_result": "oracle10G"
+        }
+    ],
+    "least": [
+        {
+            "function_signature": "LEAST(expr1, expr2, ...)",
+            "description": "Return the least (smallest) value from the list of expressions.",
+            "example": "SELECT LEAST(10, 3, 7) FROM dual;",
+            "example_result": "3"
+        }
+    ],
+    "concat": [
+        {
+            "function_signature": "CONCAT(s1, s2) | s1 || s2",
+            "description": "Concatenate two strings (CONCAT accepts two arguments; '||' operator supports multiple).",
+            "example": "SELECT CONCAT('data', 'base') FROM dual; -- or SELECT 'data' || 'base' FROM dual;",
+            "example_result": "database"
+        }
+    ],
+    "substr": [
+        {
+            "function_signature": "SUBSTR(str, start[, length])",
+            "description": "Return substring of str starting at position start for length characters (length optional).",
+            "example": "SELECT SUBSTR('database', 1, 4) FROM dual;",
+            "example_result": "data"
+        }
+    ],
+    "instr": [
+        {
+            "function_signature": "INSTR(str, substr[, start[, occurrence]])",
+            "description": "Return the position of the (occurrence-th) occurrence of substr within str, searching from start.",
+            "example": "SELECT INSTR('package', 'a') FROM dual;",
+            "example_result": "2"
+        }
+    ],
+    "length": [
+        {
+            "function_signature": "LENGTH(str)",
+            "description": "Return the length (number of characters) of str.",
+            "example": "SELECT LENGTH('oracle') FROM dual;",
+            "example_result": "6"
+        }
+    ],
+    "lower": [
+        {
+            "function_signature": "LOWER(str)",
+            "description": "Return str converted to lowercase.",
+            "example": "SELECT LOWER('ORACLE') FROM dual;",
+            "example_result": "oracle"
+        }
+    ],
+    "upper": [
+        {
+            "function_signature": "UPPER(str)",
+            "description": "Return str converted to uppercase.",
+            "example": "SELECT UPPER('oracle') FROM dual;",
+            "example_result": "ORACLE"
+        }
+    ],
+    "initcap": [
+        {
+            "function_signature": "INITCAP(str)",
+            "description": "Return str with the first letter of each word in uppercase and the rest in lowercase.",
+            "example": "SELECT INITCAP('oracle database tips') FROM dual;",
+            "example_result": "Oracle Database Tips"
+        }
+    ],
+    "replace": [
+        {
+            "function_signature": "REPLACE(str, search_str [, replace_str])",
+            "description": "Replace occurrences of search_str in str with replace_str (replace_str optional).",
+            "example": "SELECT REPLACE('hello world', 'world', 'oracle') FROM dual;",
+            "example_result": "hello oracle"
+        }
+    ],
+    "translate": [
+        {
+            "function_signature": "TRANSLATE(str, from_str, to_str)",
+            "description": "Replace characters in str that appear in from_str with corresponding characters in to_str (1:1 mapping).",
+            "example": "SELECT TRANSLATE('123abc', '123', 'XYZ') FROM dual;",
+            "example_result": "XYZabc"
+        }
+    ],
+    "lpad": [
+        {
+            "function_signature": "LPAD(str, length [, pad_str])",
+            "description": "Left-pad str to the specified length with pad_str (default space).",
+            "example": "SELECT LPAD('42', 5, '0') FROM dual;",
+            "example_result": "00042"
+        }
+    ],
+    "rpad": [
+        {
+            "function_signature": "RPAD(str, length [, pad_str])",
+            "description": "Right-pad str to the specified length with pad_str (default space).",
+            "example": "SELECT RPAD('42', 5, '*') FROM dual;",
+            "example_result": "42***"
+        }
+    ],
+    "ltrim": [
+        {
+            "function_signature": "LTRIM(str[, set])",
+            "description": "Trim characters in set (default whitespace) from the left of str.",
+            "example": "SELECT LTRIM('   abc') FROM dual;",
+            "example_result": "abc"
+        }
+    ],
+    "rtrim": [
+        {
+            "function_signature": "RTRIM(str[, set])",
+            "description": "Trim characters in set (default whitespace) from the right of str.",
+            "example": "SELECT RTRIM('abc   ') FROM dual;",
+            "example_result": "abc"
+        }
+    ],
+    "trim": [
+        {
+            "function_signature": "TRIM([[LEADING|TRAILING|BOTH] trim_char FROM] str)",
+            "description": "Trim trim_char (or whitespace) from str on the specified side (LEADING/TRAILING/BOTH).",
+            "example": "SELECT TRIM(BOTH 'x' FROM 'xxhelloxx') FROM dual;",
+            "example_result": "hello"
+        }
+    ],
+    "chr": [
+        {
+            "function_signature": "CHR(n)",
+            "description": "Return the character having the binary equivalent to n (ASCII/character set code).",
+            "example": "SELECT CHR(79) || CHR(82) || CHR(65) FROM dual;",
+            "example_result": "ORA"
+        }
+    ],
+    "ascii": [
+        {
+            "function_signature": "ASCII(char)",
+            "description": "Return the numeric code (ASCII/character set) of the first character.",
+            "example": "SELECT ASCII('A') FROM dual;",
+            "example_result": "65"
+        }
+    ],
+    "dump": [
+        {
+            "function_signature": "DUMP(expr)",
+            "description": "Return a string showing the internal datatype code, length, and internal representation of expr.",
+            "example": "SELECT DUMP('cat') FROM dual;",
+            "example_result": "Typ=96 Len=3: 99,97,116"
+        }
+    ],
+    "nvl": [
+        {
+            "function_signature": "NVL(expr1, expr2)",
+            "description": "If expr1 is NULL, return expr2; otherwise return expr1.",
+            "example": "SELECT NVL(commission_pct, 0) FROM employees;",
+            "example_result": "0"
+        }
+    ],
+    "nvl2": [
+        {
+            "function_signature": "NVL2(expr1, expr_if_not_null, expr_if_null)",
+            "description": "If expr1 is NOT NULL return expr_if_not_null, else return expr_if_null.",
+            "example": "SELECT NVL2(manager_id, 'has manager', 'no manager') FROM employees;",
+            "example_result": "has manager"
+        }
+    ],
+    "nullif": [
+        {
+            "function_signature": "NULLIF(expr1, expr2)",
+            "description": "Return NULL if expr1 = expr2; otherwise return expr1.",
+            "example": "SELECT NULLIF(salary, 0) FROM employees;",
+            "example_result": "NULL (if salary is 0)"
+        }
+    ],
+    "coalesce": [
+        {
+            "function_signature": "COALESCE(expr1, expr2, ...)",
+            "description": "Return the first non-NULL expression from the list.",
+            "example": "SELECT COALESCE(phone_ext, phone, 'N/A') FROM contacts;",
+            "example_result": "phone number or 'N/A'"
+        }
+    ],
+    "decode": [
+        {
+            "function_signature": "DECODE(expr, search1, result1, search2, result2, ..., default)",
+            "description": "Compare expr to each search value; return the corresponding result on match, otherwise default. (Oracle-specific convenience similar to CASE.)",
+            "example": "SELECT DECODE(deptno, 10, 'ten', 20, 'twenty', 'other') FROM dept;",
+            "example_result": "ten (for deptno=10)"
+        }
+    ],
+    "to_char": [
+        {
+            "function_signature": "TO_CHAR(expr[, fmt])",
+            "description": "Convert a date or number to a string using the optional format fmt.",
+            "example": "SELECT TO_CHAR(sysdate, 'DD-MON-YYYY') FROM dual;",
+            "example_result": "26-OCT-2025"
+        }
+    ],
+    "to_date": [
+        {
+            "function_signature": "TO_DATE(string, format)",
+            "description": "Convert string to DATE using the specified format.",
+            "example": "SELECT TO_DATE('2025-10-26', 'YYYY-MM-DD') FROM dual;",
+            "example_result": "DATE value representing 2025-10-26"
+        }
+    ],
+    "to_number": [
+        {
+            "function_signature": "TO_NUMBER(string[, format])",
+            "description": "Convert string to NUMBER using optional format.",
+            "example": "SELECT TO_NUMBER('1,234.56', '9G999D99') FROM dual;",
+            "example_result": "1234.56"
+        }
+    ],
+    "add_months": [
+        {
+            "function_signature": "ADD_MONTHS(date, n)",
+            "description": "Return date plus n months; if the resulting month has fewer days and the original day is too large, result is last day of month.",
+            "example": "SELECT ADD_MONTHS(SYSDATE, 1) FROM dual;",
+            "example_result": "current date plus one month"
+        }
+    ],
+    "months_between": [
+        {
+            "function_signature": "MONTHS_BETWEEN(date1, date2)",
+            "description": "Return number of months (and fractional months) between date1 and date2.",
+            "example": "SELECT MONTHS_BETWEEN(TO_DATE('2025-10-26','YYYY-MM-DD'), TO_DATE('2025-01-01','YYYY-MM-DD')) FROM dual;",
+            "example_result": "9.83870967741935"
+        }
+    ],
+    "next_day": [
+        {
+            "function_signature": "NEXT_DAY(date, char_day)",
+            "description": "Return the date of the next weekday named char_day after date.",
+            "example": "SELECT NEXT_DAY(TO_DATE('2025-10-26','YYYY-MM-DD'), 'MONDAY') FROM dual;",
+            "example_result": "date of next Monday after 2025-10-26"
+        }
+    ],
+    "last_day": [
+        {
+            "function_signature": "LAST_DAY(date)",
+            "description": "Return the last day of the month that contains date.",
+            "example": "SELECT LAST_DAY(SYSDATE) FROM dual;",
+            "example_result": "last day of current month"
+        }
+    ],
+    "sysdate": [
+        {
+            "function_signature": "SYSDATE",
+            "description": "Pseudocolumn returning the current date and time from the database server (DATE datatype).",
+            "example": "SELECT SYSDATE FROM dual;",
+            "example_result": "26-OCT-2025 13:45:00 (example)"
+        }
+    ],
+    "current_date": [
+        {
+            "function_signature": "CURRENT_DATE",
+            "description": "Return the current date in the session time zone (DATE datatype).",
+            "example": "SELECT CURRENT_DATE FROM dual;",
+            "example_result": "current date/time in session time zone"
+        }
+    ],
+    "sin": [
+        {
+            "function_signature": "SIN(x)",
+            "description": "Return the sine of x (x in radians).",
+            "example": "SELECT SIN(PI()/2) FROM dual;",
+            "example_result": "1"
+        }
+    ],
+    "cos": [
+        {
+            "function_signature": "COS(x)",
+            "description": "Return the cosine of x (x in radians).",
+            "example": "SELECT COS(0) FROM dual;",
+            "example_result": "1"
+        }
+    ],
+    "tan": [
+        {
+            "function_signature": "TAN(x)",
+            "description": "Return the tangent of x (x in radians).",
+            "example": "SELECT TAN(0) FROM dual;",
+            "example_result": "0"
+        }
+    ],
+    "asin": [
+        {
+            "function_signature": "ASIN(x)",
+            "description": "Return the arc sine of x (result in radians).",
+            "example": "SELECT ASIN(1) FROM dual;",
+            "example_result": "1.5707963267949"
+        }
+    ],
+    "acos": [
+        {
+            "function_signature": "ACOS(x)",
+            "description": "Return the arc cosine of x (result in radians).",
+            "example": "SELECT ACOS(1) FROM dual;",
+            "example_result": "0"
+        }
+    ],
+    "atan": [
+        {
+            "function_signature": "ATAN(x)",
+            "description": "Return the arc tangent of x (result in radians).",
+            "example": "SELECT ATAN(1) FROM dual;",
+            "example_result": "0.785398163397448"
+        }
+    ],
+    "atan2": [
+        {
+            "function_signature": "ATAN2(y, x)",
+            "description": "Return the arc tangent of y/x using the signs of both arguments to determine the quadrant of the return value.",
+            "example": "SELECT ATAN2(1, -1) FROM dual;",
+            "example_result": "2.35619449019234"
+        }
+    ],
+    "sinh": [
+        {
+            "function_signature": "SINH(x)",
+            "description": "Return the hyperbolic sine of x.",
+            "example": "SELECT SINH(1) FROM dual;",
+            "example_result": "1.17520119364380"
+        }
+    ],
+    "cosh": [
+        {
+            "function_signature": "COSH(x)",
+            "description": "Return the hyperbolic cosine of x.",
+            "example": "SELECT COSH(1) FROM dual;",
+            "example_result": "1.54308063481524"
+        }
+    ],
+    "tanh": [
+        {
+            "function_signature": "TANH(x)",
+            "description": "Return the hyperbolic tangent of x.",
+            "example": "SELECT TANH(1) FROM dual;",
+            "example_result": "0.761594155955765"
+        }
+    ],
+    "cot": [
+        {
+            "function_signature": "COT(x)",
+            "description": "Return the cotangent of x (1 / TAN(x)).",
+            "example": "SELECT COT(PI()/4) FROM dual;",
+            "example_result": "1"
+        }
+    ],
+    "sign": [
+        {
+            "function_signature": "SIGN(x)",
+            "description": "Return -1 if x < 0, 0 if x = 0, 1 if x > 0.",
+            "example": "SELECT SIGN(-7) FROM dual;",
+            "example_result": "-1"
+        }
+    ],
+    "radians": [
+        {
+            "function_signature": "RADIANS(x)",
+            "description": "Convert degrees to radians.",
+            "example": "SELECT RADIANS(180) FROM dual;",
+            "example_result": "3.14159265358979"
+        }
+    ],
+    "degrees": [
+        {
+            "function_signature": "DEGREES(x)",
+            "description": "Convert radians to degrees.",
+            "example": "SELECT DEGREES(PI()) FROM dual;",
+            "example_result": "180"
+        }
+    ],
+    "pi": [
+        {
+            "function_signature": "PI()",
+            "description": "Return the constant π.",
+            "example": "SELECT PI() FROM dual;",
+            "example_result": "3.14159265358979"
+        }
+    ],
+    "standard_hash": [
+        {
+            "function_signature": "STANDARD_HASH(expr[, 'algorithm'])",
+            "description": "Compute a cryptographic hash (SHA1/MD5/SHA256/etc.) of expr; default algorithm depends on Oracle version.",
+            "example": "SELECT STANDARD_HASH('abc','SHA256') FROM dual;",
+            "example_result": "BA7816BF8F01CFEA414140DE5DAE2223B00361A396177A9CB410FF61F20015AD"
+        }
+    ],
+    "ora_hash": [
+        {
+            "function_signature": "ORA_HASH(expr[, max_value])",
+            "description": "Return a hash value for expr (non-cryptographic) useful for partitioning or bucketing.",
+            "example": "SELECT ORA_HASH('abc', 1000) FROM dual;",
+            "example_result": "123"
+        }
+    ],
+    "systimestamp": [
+        {
+            "function_signature": "SYSTIMESTAMP",
+            "description": "Return the current timestamp with time zone of the database server (TIMESTAMP WITH TIME ZONE).",
+            "example": "SELECT SYSTIMESTAMP FROM dual;",
+            "example_result": "2025-10-26 13:45:00.123456 +00:00 (example)"
+        }
+    ],
+    "localtimestamp": [
+        {
+            "function_signature": "LOCALTIMESTAMP",
+            "description": "Return the current timestamp in the session time zone (TIMESTAMP without time zone).",
+            "example": "SELECT LOCALTIMESTAMP FROM dual;",
+            "example_result": "2025-10-26 21:45:00.123456 (example)"
+        }
+    ],
+    "current_timestamp": [
+        {
+            "function_signature": "CURRENT_TIMESTAMP",
+            "description": "Return the current date and time in the session time zone as TIMESTAMP WITH TIME ZONE.",
+            "example": "SELECT CURRENT_TIMESTAMP FROM dual;",
+            "example_result": "2025-10-26 21:45:00.123456 +08:00 (example)"
+        }
+    ],
+    "sessiontimezone": [
+        {
+            "function_signature": "SESSIONTIMEZONE",
+            "description": "Return the session time zone (as a character value).",
+            "example": "SELECT SESSIONTIMEZONE FROM dual;",
+            "example_result": "+08:00"
+        }
+    ],
+    "dbtimezone": [
+        {
+            "function_signature": "DBTIMEZONE",
+            "description": "Return the database time zone.",
+            "example": "SELECT DBTIMEZONE FROM dual;",
+            "example_result": "+00:00"
+        }
+    ],
+    "to_timestamp": [
+        {
+            "function_signature": "TO_TIMESTAMP(string, format)",
+            "description": "Convert a string to a TIMESTAMP using the given format model.",
+            "example": "SELECT TO_TIMESTAMP('2025-10-26 12:34:56','YYYY-MM-DD HH24:MI:SS') FROM dual;",
+            "example_result": "2025-10-26 12:34:56"
+        }
+    ],
+    "to_timestamp_tz": [
+        {
+            "function_signature": "TO_TIMESTAMP_TZ(string, format)",
+            "description": "Convert a string to a TIMESTAMP WITH TIME ZONE using the format model.",
+            "example": "SELECT TO_TIMESTAMP_TZ('2025-10-26 12:00:00 +02:00','YYYY-MM-DD HH24:MI:SS TZH:TZM') FROM dual;",
+            "example_result": "2025-10-26 12:00:00 +02:00"
+        }
+    ],
+    "from_tz": [
+        {
+            "function_signature": "FROM_TZ(timestamp_value, tz_char)",
+            "description": "Convert a TIMESTAMP value to TIMESTAMP WITH TIME ZONE by adding the specified time zone.",
+            "example": "SELECT FROM_TZ(TO_TIMESTAMP('2025-10-26 12:00:00','YYYY-MM-DD HH24:MI:SS'), 'UTC') FROM dual;",
+            "example_result": "2025-10-26 12:00:00 UTC"
+        }
+    ],
+    "extract": [
+        {
+            "function_signature": "EXTRACT(field FROM datetime_value)",
+            "description": "Extract a component (YEAR, MONTH, DAY, HOUR, MINUTE, SECOND) from a date or timestamp value.",
+            "example": "SELECT EXTRACT(YEAR FROM TO_DATE('2025-10-26','YYYY-MM-DD')) FROM dual;",
+            "example_result": "2025"
+        }
+    ],
+    "numtodsinterval": [
+        {
+            "function_signature": "NUMTODSINTERVAL(n, 'unit')",
+            "description": "Convert n (number) to an INTERVAL DAY TO SECOND using unit like 'DAY','HOUR','MINUTE','SECOND'.",
+            "example": "SELECT NUMTODSINTERVAL(90,'MINUTE') FROM dual;",
+            "example_result": " +000000000 01:30:00.000000 "
+        }
+    ],
+    "numtoyminterval": [
+        {
+            "function_signature": "NUMTOYMINTERVAL(n, 'unit')",
+            "description": "Convert n (number) to an INTERVAL YEAR TO MONTH using unit 'YEAR' or 'MONTH'.",
+            "example": "SELECT NUMTOYMINTERVAL(18,'MONTH') FROM dual;",
+            "example_result": " +000000001 06"
+        }
+    ],
+    "scn_to_timestamp": [
+        {
+            "function_signature": "SCN_TO_TIMESTAMP(scn)",
+            "description": "Convert a system change number (SCN) to an approximate TIMESTAMP.",
+            "example": "SELECT SCN_TO_TIMESTAMP(100000) FROM dual;",
+            "example_result": "2007-05-01 10:00:00 (example)"
+        }
+    ],
+    "to_nchar": [
+        {
+            "function_signature": "TO_NCHAR(expr[, fmt])",
+            "description": "Convert an expression to NCHAR or NVARCHAR2 string using an optional format model.",
+            "example": "SELECT TO_NCHAR(1234) FROM dual;",
+            "example_result": "1234"
+        }
+    ],
+    "to_binary_float": [
+        {
+            "function_signature": "TO_BINARY_FLOAT(expr)",
+            "description": "Convert an expression to the BINARY_FLOAT data type.",
+            "example": "SELECT TO_BINARY_FLOAT('3.14') FROM dual;",
+            "example_result": "3.14"
+        }
+    ],
+    "to_binary_double": [
+        {
+            "function_signature": "TO_BINARY_DOUBLE(expr)",
+            "description": "Convert an expression to the BINARY_DOUBLE data type.",
+            "example": "SELECT TO_BINARY_DOUBLE('2.71828') FROM dual;",
+            "example_result": "2.71828"
+        }
+    ],
+    "convert": [
+        {
+            "function_signature": "CONVERT(string, dest_char_set [, src_char_set])",
+            "description": "Convert a string to another character set.",
+            "example": "SELECT CONVERT('abc','WE8MSWIN1252') FROM dual;",
+            "example_result": "abc (converted bytes)"
+        }
+    ],
+    "to_single_byte": [
+        {
+            "function_signature": "TO_SINGLE_BYTE(str)",
+            "description": "Convert multi-byte characters in str to their single-byte equivalents (useful for East-Asian charsets).",
+            "example": "SELECT TO_SINGLE_BYTE('ＡＢＣ') FROM dual;",
+            "example_result": "ABC"
+        }
+    ],
+    "to_multi_byte": [
+        {
+            "function_signature": "TO_MULTI_BYTE(str)",
+            "description": "Convert single-byte characters in str to their multi-byte equivalents.",
+            "example": "SELECT TO_MULTI_BYTE('ABC') FROM dual;",
+            "example_result": "ＡＢＣ"
+        }
+    ],
+    "nlssort": [
+        {
+            "function_signature": "NLSSORT(str, 'nlsparam')",
+            "description": "Return a sort key for str using the specified NLS sorting parameters (useful in ORDER BY).",
+            "example": "SELECT NLSSORT('straße','NLS_SORT=GERMAN') FROM dual;",
+            "example_result": "<binary sort key>"
+        }
+    ],
+    "regexp_instr": [
+        {
+            "function_signature": "REGEXP_INSTR(source, pattern [, start [, nth [, return_option [, match_parameter]]]])",
+            "description": "Return the position of a regular-expression match in source (powerful regex search).",
+            "example": "SELECT REGEXP_INSTR('abc123','[0-9]+') FROM dual;",
+            "example_result": "4"
+        }
+    ],
+    "regexp_substr": [
+        {
+            "function_signature": "REGEXP_SUBSTR(source, pattern [, start [, nth [, match_parameter]]])",
+            "description": "Return the substring matching the regular-expression pattern.",
+            "example": "SELECT REGEXP_SUBSTR('abc123def','[0-9]+') FROM dual;",
+            "example_result": "123"
+        }
+    ],
+    "regexp_replace": [
+        {
+            "function_signature": "REGEXP_REPLACE(source, pattern, replace_string [, start [, nth [, match_parameter]]])",
+            "description": "Replace substrings that match a regular-expression pattern.",
+            "example": "SELECT REGEXP_REPLACE('a1b2c3','[0-9]','') FROM dual;",
+            "example_result": "abc"
+        }
+    ],
+    "regexp_count": [
+        {
+            "function_signature": "REGEXP_COUNT(source, pattern [, start [, match_parameter]])",
+            "description": "Return the number of occurrences of the regular-expression pattern in source.",
+            "example": "SELECT REGEXP_COUNT('a1b2c3','[0-9]') FROM dual;",
+            "example_result": "3"
+        }
+    ],
+    "json_value": [
+        {
+            "function_signature": "JSON_VALUE(json_column, 'json_path' RETURNING datatype DEFAULT return_on_error ON ERROR)",
+            "description": "Extract a scalar value from a JSON document using a SQL/JSON path expression.",
+            "example": "SELECT JSON_VALUE('{\"a\":5}','$.a') FROM dual;",
+            "example_result": "5"
+        }
+    ],
+    "json_query": [
+        {
+            "function_signature": "JSON_QUERY(json_column, 'json_path')",
+            "description": "Extract an object or array from a JSON document as JSON text.",
+            "example": "SELECT JSON_QUERY('{\"a\": [1,2]}', '$.a') FROM dual;",
+            "example_result": "[1,2]"
+        }
+    ],
+    "json_table": [
+        {
+            "function_signature": "JSON_TABLE(json_doc, 'path' COLUMNS (...))",
+            "description": "Project JSON data into rows and columns (table-like view of JSON).",
+            "example": "SELECT * FROM JSON_TABLE('[{\"id\":1}]','$[*]' COLUMNS (id PATH '$.id')) jt;",
+            "example_result": "1"
+        }
+    ],
+    "json_exists": [
+        {
+            "function_signature": "JSON_EXISTS(json_column, 'json_path')",
+            "description": "Return true if the specified JSON path exists in the JSON document.",
+            "example": "SELECT JSON_EXISTS('{\"a\":1}', '$.a') FROM dual;",
+            "example_result": "TRUE"
+        }
+    ],
+    "json_objectagg": [
+        {
+            "function_signature": "JSON_OBJECTAGG(key VALUE expr [RETURNING data_type])",
+            "description": "Aggregate function to produce a single JSON object from key-value pairs.",
+            "example": "SELECT JSON_OBJECTAGG(k VALUE v) FROM (SELECT 'a' k, 1 v FROM dual);",
+            "example_result": "{\"a\":1}"
+        }
+    ],
+    "json_arrayagg": [
+        {
+            "function_signature": "JSON_ARRAYAGG(expr [RETURNING data_type])",
+            "description": "Aggregate function to produce a JSON array from expression values.",
+            "example": "SELECT JSON_ARRAYAGG(val) FROM (SELECT 1 val FROM dual UNION ALL SELECT 2 FROM dual);",
+            "example_result": "[1,2]"
+        }
+    ],
+    "xmltype": [
+        {
+            "function_signature": "XMLTYPE(xml_string)",
+            "description": "Construct an XMLType instance from an XML string or CLOB.",
+            "example": "SELECT XMLTYPE('<a>1</a>') FROM dual;",
+            "example_result": "<a>1</a>"
+        }
+    ],
+    "xmlcast": [
+        {
+            "function_signature": "XMLCAST(xml_expression AS data_type)",
+            "description": "Cast an XML expression to an Oracle SQL datatype.",
+            "example": "SELECT XMLCAST(EXTRACT(XMLTYPE('<a>1</a>'),'//a/text()') AS NUMBER) FROM dual;",
+            "example_result": "1"
+        }
+    ],
+    "xmlserialize": [
+        {
+            "function_signature": "XMLSERIALIZE(CONTENT xml_expression AS CLOB)",
+            "description": "Serialize XMLType content to a character large object (CLOB) or VARCHAR2.",
+            "example": "SELECT XMLSERIALIZE(CONTENT XMLTYPE('<a>1</a>') AS CLOB) FROM dual;",
+            "example_result": "<a>1</a>"
+        }
+    ],
+    "xmlquery": [
+        {
+            "function_signature": "XMLQUERY(xpath PASSING xml_source RETURNING CONTENT)",
+            "description": "Evaluate an XQuery expression against XML data and return XML results.",
+            "example": "SELECT XMLQUERY('/a' PASSING XMLTYPE('<a>1</a>')) FROM dual;",
+            "example_result": "<a>1</a>"
+        }
+    ],
+    "xmlagg": [
+        {
+            "function_signature": "XMLAGG(xml_expression)",
+            "description": "Aggregate XML fragments into a single XMLType.",
+            "example": "SELECT XMLAGG(XMLELEMENT(\"e\",col)) FROM (SELECT 'x' col FROM dual UNION ALL SELECT 'y' FROM dual);",
+            "example_result": "<e>x</e><e>y</e>"
+        }
+    ],
+    "xmlconcat": [
+        {
+            "function_signature": "XMLCONCAT(xml1, xml2, ...)",
+            "description": "Concatenate multiple XMLType values.",
+            "example": "SELECT XMLCONCAT(XMLTYPE('<a/>'), XMLTYPE('<b/>')) FROM dual;",
+            "example_result": "<a/><b/>"
+        }
+    ],
+    "xmltable": [
+        {
+            "function_signature": "XMLTABLE(xpath PASSING xml_source COLUMNS ...)",
+            "description": "Project XML data into relational rows/columns (similar to JSON_TABLE but for XML).",
+            "example": "SELECT x.* FROM XMLTABLE('/items/item' PASSING XMLTYPE('<items><item>1</item></items>') COLUMNS val PATH '.') x;",
+            "example_result": "1"
+        }
+    ],
+    "sys_connect_by_path": [
+        {
+            "function_signature": "SYS_CONNECT_BY_PATH(col, 'separator')",
+            "description": "Return the path (concatenated string) from a root row to the current row in a hierarchical query.",
+            "example": "SELECT SYS_CONNECT_BY_PATH(name,'/') FROM emp CONNECT BY PRIOR empno = mgr;",
+            "example_result": "/CEO/Manager/Employee"
+        }
+    ],
+    "connect_by_root": [
+        {
+            "function_signature": "CONNECT_BY_ROOT expr",
+            "description": "Return the root value of expr for the current row in a hierarchical query.",
+            "example": "SELECT CONNECT_BY_ROOT deptno FROM emp CONNECT BY PRIOR empno = mgr;",
+            "example_result": "10"
+        }
+    ],
+    "row_number": [
+        {
+            "function_signature": "ROW_NUMBER() OVER (ORDER BY ...)",
+            "description": "Analytic function that assigns a unique sequential integer to rows within a result partition.",
+            "example": "SELECT ROW_NUMBER() OVER (ORDER BY salary DESC) rn, empno FROM emp;",
+            "example_result": "1"
+        }
+    ],
+    "rank": [
+        {
+            "function_signature": "RANK() OVER (ORDER BY ...)",
+            "description": "Analytic ranking function that assigns the rank of a row within a partition with gaps for ties.",
+            "example": "SELECT RANK() OVER (ORDER BY salary DESC) rnk FROM emp;",
+            "example_result": "1"
+        }
+    ],
+    "dense_rank": [
+        {
+            "function_signature": "DENSE_RANK() OVER (ORDER BY ...)",
+            "description": "Analytic ranking function that assigns ranks without gaps for tied values.",
+            "example": "SELECT DENSE_RANK() OVER (ORDER BY salary DESC) dr FROM emp;",
+            "example_result": "1"
+        }
+    ],
+    "ntile": [
+        {
+            "function_signature": "NTILE(n) OVER (ORDER BY ...)",
+            "description": "Analytic function that distributes rows into n approximately equal buckets and returns the bucket number.",
+            "example": "SELECT NTILE(4) OVER (ORDER BY salary) bucket FROM emp;",
+            "example_result": "1"
+        }
+    ],
+    "lag": [
+        {
+            "function_signature": "LAG(expr [, offset [, default]]) OVER (ORDER BY ...)",
+            "description": "Analytic function returning the value of expr from a preceding row.",
+            "example": "SELECT LAG(salary,1) OVER (ORDER BY empno) prev_salary FROM emp;",
+            "example_result": "3000"
+        }
+    ],
+    "lead": [
+        {
+            "function_signature": "LEAD(expr [, offset [, default]]) OVER (ORDER BY ...)",
+            "description": "Analytic function returning the value of expr from a following row.",
+            "example": "SELECT LEAD(salary,1) OVER (ORDER BY empno) next_salary FROM emp;",
+            "example_result": "4000"
+        }
+    ],
+    "first_value": [
+        {
+            "function_signature": "FIRST_VALUE(expr) OVER (ORDER BY ...)",
+            "description": "Analytic function returning the first value in an ordered set.",
+            "example": "SELECT FIRST_VALUE(salary) OVER (ORDER BY salary DESC) top_salary FROM emp;",
+            "example_result": "10000"
+        }
+    ],
+    "last_value": [
+        {
+            "function_signature": "LAST_VALUE(expr) OVER (ORDER BY ... RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING)",
+            "description": "Analytic function returning the last value in an ordered set (careful with frame clauses).",
+            "example": "SELECT LAST_VALUE(salary) OVER (ORDER BY salary) last_sal FROM emp;",
+            "example_result": "1000"
+        }
+    ],
+    "cume_dist": [
+        {
+            "function_signature": "CUME_DIST() OVER (ORDER BY ...)",
+            "description": "Analytic function returning the cumulative distribution of a value within a partition.",
+            "example": "SELECT CUME_DIST() OVER (ORDER BY salary) cd FROM emp;",
+            "example_result": "0.75"
+        }
+    ],
+    "percent_rank": [
+        {
+            "function_signature": "PERCENT_RANK() OVER (ORDER BY ...)",
+            "description": "Analytic function that returns the relative rank of a row - (rank-1)/(n-1).",
+            "example": "SELECT PERCENT_RANK() OVER (ORDER BY salary) pr FROM emp;",
+            "example_result": "0.333333"
+        }
+    ],
+    "nth_value": [
+        {
+            "function_signature": "NTH_VALUE(expr, n) OVER (ORDER BY ...)",
+            "description": "Analytic function returning the nth value in the ordered set.",
+            "example": "SELECT NTH_VALUE(salary,2) OVER (ORDER BY salary) val FROM emp;",
+            "example_result": "2000"
+        }
+    ],
+    "median": [
+        {
+            "function_signature": "MEDIAN(expr)",
+            "description": "Aggregate function returning the median of expr values.",
+            "example": "SELECT MEDIAN(salary) FROM emp;",
+            "example_result": "3500"
+        }
+    ],
+    "listagg": [
+        {
+            "function_signature": "LISTAGG(expr, delimiter) WITHIN GROUP (ORDER BY ...)",
+            "description": "Aggregate function concatenating values from multiple rows into a single string.",
+            "example": "SELECT LISTAGG(name, ',') WITHIN GROUP (ORDER BY name) FROM dept;",
+            "example_result": "Alice,Bob,Charlie"
+        }
+    ],
+    "collect": [
+        {
+            "function_signature": "COLLECT(expr)",
+            "description": "Aggregate function that returns a collection (nested table) of expr values.",
+            "example": "SELECT CAST(COLLECT(empno) AS SYS.OdciNumberList) FROM emp;",
+            "example_result": "[7369,7499,...]"
+        }
+    ],
+    "corr": [
+        {
+            "function_signature": "CORR(x, y)",
+            "description": "Aggregate function returning the Pearson correlation coefficient between x and y.",
+            "example": "SELECT CORR(salary, commission_pct) FROM emp;",
+            "example_result": "0.123"
+        }
+    ],
+    "covar_pop": [
+        {
+            "function_signature": "COVAR_POP(x, y)",
+            "description": "Aggregate function returning population covariance of x and y.",
+            "example": "SELECT COVAR_POP(salary, bonus) FROM emp;",
+            "example_result": "12345.67"
+        }
+    ],
+    "covar_samp": [
+        {
+            "function_signature": "COVAR_SAMP(x, y)",
+            "description": "Aggregate function returning sample covariance of x and y.",
+            "example": "SELECT COVAR_SAMP(salary, bonus) FROM emp;",
+            "example_result": "12345.67"
+        }
+    ],
+    "regr_slope": [
+        {
+            "function_signature": "REGR_SLOPE(y, x)",
+            "description": "Return the slope of the regression line for y on x.",
+            "example": "SELECT REGR_SLOPE(salary, years) FROM emp;",
+            "example_result": "250.5"
+        }
+    ],
+    "regr_intercept": [
+        {
+            "function_signature": "REGR_INTERCEPT(y, x)",
+            "description": "Return the intercept of the regression line for y on x.",
+            "example": "SELECT REGR_INTERCEPT(salary, years) FROM emp;",
+            "example_result": "1000"
+        }
+    ],
+    "regr_count": [
+        {
+            "function_signature": "REGR_COUNT(y, x)",
+            "description": "Return the number of non-null paired (y,x) values used in regression.",
+            "example": "SELECT REGR_COUNT(salary, years) FROM emp;",
+            "example_result": "100"
+        }
+    ],
+    "regr_r2": [
+        {
+            "function_signature": "REGR_R2(y, x)",
+            "description": "Return the coefficient of determination (R-squared) for regression of y on x.",
+            "example": "SELECT REGR_R2(salary, years) FROM emp;",
+            "example_result": "0.85"
+        }
+    ],
+    "regr_avgx": [
+        {
+            "function_signature": "REGR_AVGX(y, x)",
+            "description": "Return average of the independent variable x used in regression.",
+            "example": "SELECT REGR_AVGX(salary, years) FROM emp;",
+            "example_result": "5.3"
+        }
+    ],
+    "regr_avgy": [
+        {
+            "function_signature": "REGR_AVGY(y, x)",
+            "description": "Return average of the dependent variable y used in regression.",
+            "example": "SELECT REGR_AVGY(salary, years) FROM emp;",
+            "example_result": "4500"
+        }
+    ],
+    "regr_sxx": [
+        {
+            "function_signature": "REGR_SXX(y, x)",
+            "description": "Return sum of squares of x about its mean used in regression.",
+            "example": "SELECT REGR_SXX(salary, years) FROM emp;",
+            "example_result": "1234.5"
+        }
+    ],
+    "regr_syy": [
+        {
+            "function_signature": "REGR_SYY(y, x)",
+            "description": "Return sum of squares of y about its mean used in regression.",
+            "example": "SELECT REGR_SYY(salary, years) FROM emp;",
+            "example_result": "5678.9"
+        }
+    ],
+    "regr_sxy": [
+        {
+            "function_signature": "REGR_SXY(y, x)",
+            "description": "Return sum of cross-products of x and y about their means used in regression.",
+            "example": "SELECT REGR_SXY(salary, years) FROM emp;",
+            "example_result": "987.6"
+        }
+    ],
+    "stddev": [
+        {
+            "function_signature": "STDDEV(expr)",
+            "description": "Return the sample standard deviation of expr (aggregate).",
+            "example": "SELECT STDDEV(salary) FROM emp;",
+            "example_result": "1200.5"
+        }
+    ],
+    "stddev_pop": [
+        {
+            "function_signature": "STDDEV_POP(expr)",
+            "description": "Return the population standard deviation of expr.",
+            "example": "SELECT STDDEV_POP(salary) FROM emp;",
+            "example_result": "1180.3"
+        }
+    ],
+    "stddev_samp": [
+        {
+            "function_signature": "STDDEV_SAMP(expr)",
+            "description": "Return the sample standard deviation of expr (identical to STDDEV).",
+            "example": "SELECT STDDEV_SAMP(salary) FROM emp;",
+            "example_result": "1200.5"
+        }
+    ],
+    "var_pop": [
+        {
+            "function_signature": "VAR_POP(expr)",
+            "description": "Return the population variance of expr.",
+            "example": "SELECT VAR_POP(salary) FROM emp;",
+            "example_result": "1392600"
+        }
+    ],
+    "var_samp": [
+        {
+            "function_signature": "VAR_SAMP(expr)",
+            "description": "Return the sample variance of expr.",
+            "example": "SELECT VAR_SAMP(salary) FROM emp;",
+            "example_result": "1441000"
+        }
+    ],
+    "variance": [
+        {
+            "function_signature": "VARIANCE(expr)",
+            "description": "Return the sample variance of expr (synonym of VAR_SAMP in many contexts).",
+            "example": "SELECT VARIANCE(salary) FROM emp;",
+            "example_result": "1441000"
+        }
+    ],
+    "percentile_cont": [
+        {
+            "function_signature": "PERCENTILE_CONT(fraction) WITHIN GROUP (ORDER BY expr)",
+            "description": "Inverse distribution function that returns a continuous percentile value.",
+            "example": "SELECT PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY salary) FROM emp;",
+            "example_result": "3500"
+        }
+    ],
+    "percentile_disc": [
+        {
+            "function_signature": "PERCENTILE_DISC(fraction) WITHIN GROUP (ORDER BY expr)",
+            "description": "Inverse distribution function that returns a discrete percentile (one of the values).",
+            "example": "SELECT PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY salary) FROM emp;",
+            "example_result": "3500"
+        }
+    ],
+    "hextoraw": [
+        {
+            "function_signature": "HEXTORAW(hex_string)",
+            "description": "Convert a hexadecimal string to a RAW value.",
+            "example": "SELECT HEXTORAW('DEADBEEF') FROM dual;",
+            "example_result": "RAW value"
+        }
+    ],
+    "rawtohex": [
+        {
+            "function_signature": "RAWTOHEX(raw_value)",
+            "description": "Convert RAW value to its hexadecimal representation.",
+            "example": "SELECT RAWTOHEX(HEXTORAW('DEADBEEF')) FROM dual;",
+            "example_result": "DEADBEEF"
+        }
+    ],
+    "bitand": [
+        {
+            "function_signature": "BITAND(x, y)",
+            "description": "Return the bitwise AND of two numbers.",
+            "example": "SELECT BITAND(6,3) FROM dual;",
+            "example_result": "2"
+        }
+    ],
+    "to_clob": [
+        {
+            "function_signature": "TO_CLOB(expr)",
+            "description": "Convert a character expression to CLOB.",
+            "example": "SELECT TO_CLOB('long text') FROM dual;",
+            "example_result": "CLOB value 'long text'"
+        }
+    ],
+    "empty_clob": [
+        {
+            "function_signature": "EMPTY_CLOB()",
+            "description": "Return an empty CLOB locator.",
+            "example": "INSERT INTO t(c) VALUES (EMPTY_CLOB());",
+            "example_result": "empty CLOB inserted (locator)"
+        }
+    ],
+    "empty_blob": [
+        {
+            "function_signature": "EMPTY_BLOB()",
+            "description": "Return an empty BLOB locator.",
+            "example": "INSERT INTO t(b) VALUES (EMPTY_BLOB());",
+            "example_result": "empty BLOB inserted (locator)"
+        }
+    ],
+    "user": [
+        {
+            "function_signature": "USER",
+            "description": "Return the current Oracle username (pseudocolumn / function-like).",
+            "example": "SELECT USER FROM dual;",
+            "example_result": "HR"
+        }
+    ],
+    "current_user": [
+        {
+            "function_signature": "CURRENT_USER",
+            "description": "Return the current SQL user (same as USER in many contexts).",
+            "example": "SELECT CURRENT_USER FROM dual;",
+            "example_result": "HR"
+        }
+    ],
+    "session_user": [
+        {
+            "function_signature": "SESSION_USER",
+            "description": "Return the session user name.",
+            "example": "SELECT SESSION_USER FROM dual;",
+            "example_result": "HR"
+        }
+    ],
+    "sys_context": [
+        {
+            "function_signature": "SYS_CONTEXT(namespace, parameter[, length])",
+            "description": "Return the value of environment or context parameters (useful for session/application context).",
+            "example": "SELECT SYS_CONTEXT('USERENV','IP_ADDRESS') FROM dual;",
+            "example_result": "192.168.1.10"
+        }
+    ],
+    "dbms_random_value": [
+        {
+            "function_signature": "DBMS_RANDOM.VALUE([low [, high]])",
+            "description": "Return a pseudo-random number (package function DBMS_RANDOM.VALUE).",
+            "example": "SELECT DBMS_RANDOM.VALUE(1,100) FROM dual;",
+            "example_result": "42.1234"
+        }
+    ],
+    "soundex": [
+        {
+            "function_signature": "SOUNDEX(str)",
+            "description": "Return the SOUNDEX code for str (phonetic representation).",
+            "example": "SELECT SOUNDEX('Smith') FROM dual;",
+            "example_result": "S530"
+        }
+    ],
+    "to_char_from_number_formats_note": [
+        {
+            "function_signature": "(informational)",
+            "description": "TO_CHAR supports extensive number and date format models (see TO_CHAR entry previously provided).",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "lengthb": [
+        {
+            "function_signature": "LENGTHB(str)",
+            "description": "Return the length of str in bytes (not characters).",
+            "example": "SELECT LENGTHB('abc') FROM dual;",
+            "example_result": "3"
+        }
+    ],
+    "lengthc": [
+        {
+            "function_signature": "LENGTHC(str)",
+            "description": "Return the length of str in characters considering multibyte semantics (character count).",
+            "example": "SELECT LENGTHC('ＡＢＣ') FROM dual;",
+            "example_result": "3"
+        }
+    ],
+    "instrb": [
+        {
+            "function_signature": "INSTRB(str, substr [, start [, occurrence]])",
+            "description": "Return position of substr in str measured in bytes.",
+            "example": "SELECT INSTRB('abc','b') FROM dual;",
+            "example_result": "2"
+        }
+    ],
+    "substrb": [
+        {
+            "function_signature": "SUBSTRB(str, start [, length])",
+            "description": "Return substring using byte offsets.",
+            "example": "SELECT SUBSTRB('abc',1,2) FROM dual;",
+            "example_result": "ab"
+        }
+    ],
+    "to_lob": [
+        {
+            "function_signature": "TO_LOB(clob_or_blob_expr)",
+            "description": "Convert long (deprecated) datatype to LOB (used in certain migration contexts).",
+            "example": "UPDATE t SET lob_col = TO_LOB(long_col);",
+            "example_result": "LOB column updated"
+        }
+    ],
+    "sysdate_related_functions_note": [
+        {
+            "function_signature": "(informational)",
+            "description": "Functions like SYSDATE, CURRENT_DATE were listed earlier; Oracle also supports many DATE/TIMESTAMP conversion utilities (TO_DATE, TO_CHAR, EXTRACT etc.).",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "cast": [
+        {
+            "function_signature": "CAST(expr AS datatype)",
+            "description": "Standard SQL function to convert expr to a target SQL datatype.",
+            "example": "SELECT CAST('123' AS NUMBER) FROM dual;",
+            "example_result": "123"
+        }
+    ],
+    "to_raw": [
+        {
+            "function_signature": "TO_RAW(expr) (DB-specific)",
+            "description": "Convert values to RAW in contexts where supported (usage can vary by version).",
+            "example": "SELECT HEXTORAW('FF') FROM dual;",
+            "example_result": "RAW value"
+        }
+    ],
+    "rowidtochar": [
+        {
+            "function_signature": "ROWIDTOCHAR(rowid)",
+            "description": "Return the CHAR representation of a ROWID.",
+            "example": "SELECT ROWIDTOCHAR(ROWID) FROM emp WHERE ROWNUM=1;",
+            "example_result": "AAAH1rAABAAABtZAAA"
+        }
+    ],
+    "rowidtonumber": [
+        {
+            "function_signature": "ROWIDTONUM(ROWID)",
+            "description": "Return the numeric representation of a ROWID (version-dependent).",
+            "example": "SELECT ROWIDTONUM(ROWID) FROM emp WHERE ROWNUM=1;",
+            "example_result": "12345"
+        }
+    ],
+    "ora_rowid": [
+        {
+            "function_signature": "ORA_ROWID",
+            "description": "Pseudocolumn / function returning the ROWID of the row (useful in SELECT lists).",
+            "example": "SELECT ORA_ROWID FROM emp WHERE ROWNUM=1;",
+            "example_result": "AAAH1rAABAAABtZAAA"
+        }
+    ],
+    "dbms_lob_getlength": [
+        {
+            "function_signature": "DBMS_LOB.GETLENGTH(lob)",
+            "description": "Return the length (in bytes or characters depending on LOB) of a LOB. (call via package DBMS_LOB).",
+            "example": "SELECT DBMS_LOB.GETLENGTH(clob_col) FROM t WHERE id=1;",
+            "example_result": "1024"
+        }
+    ],
+    "dbms_lob_substr": [
+        {
+            "function_signature": "DBMS_LOB.SUBSTR(lob, amount [, offset])",
+            "description": "Return a substring of a LOB (package DBMS_LOB function).",
+            "example": "SELECT DBMS_LOB.SUBSTR(clob_col, 100, 1) FROM t WHERE id=1;",
+            "example_result": "first 100 chars..."
+        }
+    ],
+    "userenv": [
+        {
+            "function_signature": "USERENV('parameter')",
+            "description": "Return user environment information (older interface; SYS_CONTEXT is recommended).",
+            "example": "SELECT USERENV('SESSIONID') FROM dual;",
+            "example_result": "12345"
+        }
+    ],
+    "nvl2_variation_note": [
+        {
+            "function_signature": "(informational)",
+            "description": "NVL2 already listed earlier; related functions NULLIF and COALESCE are also already present.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "tz_offset": [
+        {
+            "function_signature": "TZ_OFFSET(tz_region)",
+            "description": "Return the offset of a time zone region as a string (+HH:MI).",
+            "example": "SELECT TZ_OFFSET('Asia/Singapore') FROM dual;",
+            "example_result": "+08:00"
+        }
+    ],
+    "cardinality": [
+        {
+            "function_signature": "CARDINALITY(collection)",
+            "description": "Return the number of elements in a collection (VARRAY/NESTED TABLE).",
+            "example": "SELECT CARDINALITY(CAST(MULTISET(SELECT empno FROM emp) AS SYS.OdciNumberList)) FROM dual;",
+            "example_result": "14"
+        }
+    ],
+    "json_mergepatch": [
+        {
+            "function_signature": "JSON_MERGEPATCH(target_json, patch_json)",
+            "description": "Return a merged JSON document following JSON Merge Patch semantics (available in recent Oracle releases).",
+            "example": "SELECT JSON_MERGEPATCH('{\"a\":1}', '{\"b\":2}') FROM dual;",
+            "example_result": "{\"a\":1,\"b\":2}"
+        }
+    ],
+    "xml_exists": [
+        {
+            "function_signature": "XMLExists(xpath PASSING xml)",
+            "description": "Return TRUE if the XPath expression exists in the given XML source.",
+            "example": "SELECT XMLExists('/a' PASSING XMLTYPE('<a>1</a>')) FROM dual;",
+            "example_result": "TRUE"
+        }
+    ],
+    "regexp_like": [
+        {
+            "function_signature": "REGEXP_LIKE(source, pattern [, match_parameter])",
+            "description": "Return TRUE if source matches the regular-expression pattern (can be used in WHERE).",
+            "example": "SELECT REGEXP_LIKE('abc123','[0-9]+') FROM dual;",
+            "example_result": "TRUE"
+        }
+    ],
+    "instrc": [
+        {
+            "function_signature": "INSTRC(str, substr [, start [, occurrence]])",
+            "description": "Return the position (in characters) of substr in str considering character semantics (multibyte-safe).",
+            "example": "SELECT INSTRC('abc','b') FROM dual;",
+            "example_result": "2"
+        }
+    ],
+    "substrc": [
+        {
+            "function_signature": "SUBSTRC(str, start [, length])",
+            "description": "Return substring in character semantics for multibyte strings.",
+            "example": "SELECT SUBSTRC('abc',1,2) FROM dual;",
+            "example_result": "ab"
+        }
+    ],
+    "instr2": [
+        {
+            "function_signature": "INSTR2(str, substr [, start [, occurrence]])",
+            "description": "Position of substr in str measured in UCS2 codepoints (version-dependent).",
+            "example": "SELECT INSTR2('abc','b') FROM dual;",
+            "example_result": "2"
+        }
+    ],
+    "substr2": [
+        {
+            "function_signature": "SUBSTR2(str, start [, length])",
+            "description": "Substring measured in UCS2 codepoints (version-dependent).",
+            "example": "SELECT SUBSTR2('abc',1,2) FROM dual;",
+            "example_result": "ab"
+        }
+    ]
+}

@@ -1,0 +1,1252 @@
+{
+    "count": [
+        {
+            "function_signature": "COUNT()",
+            "description": "Used to count the number of rows in a database table.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "max": [
+        {
+            "function_signature": "MAX(column)",
+            "description": "Used to query the maximum value in a specific column.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "min": [
+        {
+            "function_signature": "MIN(column)",
+            "description": "Used to query the minimum value in a specific column.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "avg": [
+        {
+            "function_signature": "AVG(column)",
+            "description": "Used to calculate the average value of a specific column.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "sum": [
+        {
+            "function_signature": "SUM(column)",
+            "description": "Used to calculate the total sum of all values in a numeric column.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "array": [
+        {
+            "function_signature": "ARRAY(...)",
+            "description": "Used to add input values (including null) to an array.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "abs": [
+        {
+            "function_signature": "abs(x)",
+            "description": "Return the absolute value.",
+            "example": "abs(-17.4)",
+            "example_result": "17.4"
+        }
+    ],
+    "cbrt": [
+        {
+            "function_signature": "cbrt(double)",
+            "description": "Return the cube root.",
+            "example": "cbrt(27.0)",
+            "example_result": "3"
+        }
+    ],
+    "ceil": [
+        {
+            "function_signature": "ceil(double/numeric)",
+            "description": "Return the smallest integer not less than the argument.",
+            "example": "ceil(-42.8)",
+            "example_result": "-42"
+        }
+    ],
+    "degrees": [
+        {
+            "function_signature": "degrees(double)",
+            "description": "Convert radians to degrees.",
+            "example": "degrees(0.5)",
+            "example_result": "28.6478897565412"
+        }
+    ],
+    "exp": [
+        {
+            "function_signature": "exp(double/numeric)",
+            "description": "Return the natural exponential.",
+            "example": "exp(1.0)",
+            "example_result": "2.71828182845905"
+        }
+    ],
+    "floor": [
+        {
+            "function_signature": "floor(double/numeric)",
+            "description": "Return the largest integer not greater than the argument.",
+            "example": "floor(-42.8)",
+            "example_result": "-43"
+        }
+    ],
+    "ln": [
+        {
+            "function_signature": "ln(double/numeric)",
+            "description": "Return the natural logarithm.",
+            "example": "ln(2.0)",
+            "example_result": "0.693147180559945"
+        }
+    ],
+    "log": [
+        {
+            "function_signature": "log(double/numeric)",
+            "description": "Return the base-10 logarithm.",
+            "example": "log(100.0)",
+            "example_result": "2"
+        },
+        {
+            "function_signature": "log(b numeric, x numeric)",
+            "description": "Return the logarithm of x to base b.",
+            "example": "log(2.0, 64.0)",
+            "example_result": "6.0000000000"
+        }
+    ],
+    "mod": [
+        {
+            "function_signature": "mod(y, x)",
+            "description": "Return the remainder.",
+            "example": "mod(9,4)",
+            "example_result": "1"
+        }
+    ],
+    "pi": [
+        {
+            "function_signature": "pi()",
+            "description": "Return the constant π.",
+            "example": "pi()",
+            "example_result": "3.14159265358979"
+        }
+    ],
+    "power": [
+        {
+            "function_signature": "power(a double, b double)",
+            "description": "Return a raised to the power of b.",
+            "example": "power(9.0, 3.0)",
+            "example_result": "729"
+        },
+        {
+            "function_signature": "power(a numeric, b numeric)",
+            "description": "Return a raised to the power of b.",
+            "example": "power(9.0, 3.0)",
+            "example_result": "729"
+        }
+    ],
+    "radians": [
+        {
+            "function_signature": "radians(double)",
+            "description": "Convert degrees to radians.",
+            "example": "radians(45.0)",
+            "example_result": "0.785398163397448"
+        }
+    ],
+    "random": [
+        {
+            "function_signature": "random()",
+            "description": "Return a random value between 0.0 and 1.0.",
+            "example": "random()",
+            "example_result": null
+        }
+    ],
+    "round": [
+        {
+            "function_signature": "round(double/numeric)",
+            "description": "Round to the nearest integer.",
+            "example": "round(42.4)",
+            "example_result": "42"
+        },
+        {
+            "function_signature": "round(v numeric, s int)",
+            "description": "Round to s decimal places.",
+            "example": "round(42.438,2)",
+            "example_result": "42.44"
+        }
+    ],
+    "sign": [
+        {
+            "function_signature": "sign(double/numeric)",
+            "description": "Return the sign of the argument (-1, 0, +1).",
+            "example": "sign(-8.4)",
+            "example_result": "-1"
+        }
+    ],
+    "sqrt": [
+        {
+            "function_signature": "sqrt(double/numeric)",
+            "description": "Return the square root.",
+            "example": "sqrt(2.0)",
+            "example_result": "1.4142135623731"
+        }
+    ],
+    "trunc": [
+        {
+            "function_signature": "trunc(double/numeric)",
+            "description": "Truncate toward zero.",
+            "example": "trunc(42.8)",
+            "example_result": "42"
+        },
+        {
+            "function_signature": "trunc(v numeric, s int)",
+            "description": "Truncate to s decimal places.",
+            "example": "trunc(42.438,2)",
+            "example_result": "42.43"
+        }
+    ],
+    "acos": [
+        {
+            "function_signature": "acos(x)",
+            "description": "Arc cosine.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "asin": [
+        {
+            "function_signature": "asin(x)",
+            "description": "Arc sine.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "atan": [
+        {
+            "function_signature": "atan(x)",
+            "description": "Arc tangent.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "atan2": [
+        {
+            "function_signature": "atan2(x, y)",
+            "description": "Inverse of tangent y/x.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "cos": [
+        {
+            "function_signature": "cos(x)",
+            "description": "Cosine.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "cot": [
+        {
+            "function_signature": "cot(x)",
+            "description": "Cotangent.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "sin": [
+        {
+            "function_signature": "sin(x)",
+            "description": "Sine.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "tan": [
+        {
+            "function_signature": "tan(x)",
+            "description": "Tangent.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "sinh": [
+        {
+            "function_signature": "sinh(double precision) → double precision",
+            "description": "Hyperbolic sine",
+            "example": "sinh(1)",
+            "example_result": "1.1752011936438014"
+        }
+    ],
+    "cosh": [
+        {
+            "function_signature": "cosh(double precision) → double precision",
+            "description": "Hyperbolic cosine",
+            "example": "cosh(0)",
+            "example_result": "1"
+        }
+    ],
+    "tanh": [
+        {
+            "function_signature": "tanh(double precision) → double precision",
+            "description": "Hyperbolic tangent",
+            "example": "tanh(1)",
+            "example_result": "0.7615941559557649"
+        }
+    ],
+    "asinh": [
+        {
+            "function_signature": "asinh(double precision) → double precision",
+            "description": "Inverse hyperbolic sine",
+            "example": "asinh(1)",
+            "example_result": "0.881373587019543"
+        }
+    ],
+    "acosh": [
+        {
+            "function_signature": "acosh(double precision) → double precision",
+            "description": "Inverse hyperbolic cosine",
+            "example": "acosh(1)",
+            "example_result": "0"
+        }
+    ],
+    "atanh": [
+        {
+            "function_signature": "atanh(double precision) → double precision",
+            "description": "Inverse hyperbolic tangent",
+            "example": "atanh(0.5)",
+            "example_result": "0.5493061443340548"
+        }
+    ],
+    "string_concat": [
+        {
+            "function_signature": "string || string",
+            "description": "Concatenate strings.",
+            "example": "'Post' || 'greSQL'",
+            "example_result": "PostgreSQL"
+        }
+    ],
+    "bit_length": [
+        {
+            "function_signature": "bit_length(string)",
+            "description": "Return the number of bits in a string.",
+            "example": "bit_length('jose')",
+            "example_result": "32"
+        },
+        {
+            "function_signature": "bit_length(bit) → integer",
+            "description": "Returns the number of bits in the bit string",
+            "example": "bit_length(B'10111')",
+            "example_result": "5"
+        }
+    ],
+    "char_length": [
+        {
+            "function_signature": "char_length(string)",
+            "description": "Return the number of characters in a string.",
+            "example": "char_length('jose')",
+            "example_result": "4"
+        }
+    ],
+    "convert": [
+        {
+            "function_signature": "convert(string using conversion_name)",
+            "description": "Convert string encoding using the specified conversion name.",
+            "example": "convert('PostgreSQL' using iso_8859_1_to_utf8)",
+            "example_result": "'PostgreSQL'"
+        },
+        {
+            "function_signature": "convert(string text, [src_encoding name,] dest_encoding name)",
+            "description": "Convert string to destination encoding.",
+            "example": "convert('text_in_utf8', 'UTF8', 'LATIN1')",
+            "example_result": "text_in_utf8 represented in ISO 8859-1"
+        }
+    ],
+    "lower": [
+        {
+            "function_signature": "lower(string)",
+            "description": "Convert string to lowercase.",
+            "example": "lower('TOM')",
+            "example_result": "tom"
+        },
+        {
+            "function_signature": "lower(anyrange) → anyelement",
+            "description": "Extracts the lower bound of the range (returns NULL if the range is empty or the lower bound is infinite)",
+            "example": "lower(numrange(1.1,2.2))",
+            "example_result": "1.1"
+        }
+    ],
+    "octet_length": [
+        {
+            "function_signature": "octet_length(string)",
+            "description": "Return the number of bytes in a string.",
+            "example": "octet_length('jose')",
+            "example_result": "4"
+        }
+    ],
+    "overlay": [
+        {
+            "function_signature": "overlay(string placing string from int [for int])",
+            "description": "Replace a substring within a string.",
+            "example": "overlay('Txxxxas' placing 'hom' from 2 for 4)",
+            "example_result": "Thomas"
+        }
+    ],
+    "position": [
+        {
+            "function_signature": "position(substring in string)",
+            "description": "Return the position of a specified substring.",
+            "example": "position('om' in 'Thomas')",
+            "example_result": "3"
+        }
+    ],
+    "substring": [
+        {
+            "function_signature": "substring(string [from int] [for int])",
+            "description": "Extract a substring.",
+            "example": "substring('Thomas' from 2 for 3)",
+            "example_result": "hom"
+        },
+        {
+            "function_signature": "substring(string from pattern)",
+            "description": "Extract substring matching a POSIX regular expression.",
+            "example": "substring('Thomas' from '…$')",
+            "example_result": "mas"
+        },
+        {
+            "function_signature": "substring(string from pattern for escape)",
+            "description": "Extract substring matching an SQL regular expression.",
+            "example": "substring('Thomas' from '%#\"o_a#\"_' for '#')",
+            "example_result": "oma"
+        },
+        {
+            "function_signature": "substring(bits bit [ FROM start integer ] [ FOR count integer ]) → bit",
+            "description": "Extracts the substring of bits starting at start bit and stopping after count bits if specified. At least one of start and count must be provided",
+            "example": "substring(B'110010111111' from 3 for 2)",
+            "example_result": "00"
+        }
+    ],
+    "trim": [
+        {
+            "function_signature": "trim([leading|trailing|both] [characters] from string)",
+            "description": "Remove the longest string of characters (default is whitespace) from the start, end, or both sides of the string.",
+            "example": "trim(both 'x' from 'xTomxx')",
+            "example_result": "Tom"
+        }
+    ],
+    "upper": [
+        {
+            "function_signature": "upper(string)",
+            "description": "Convert string to uppercase.",
+            "example": "upper('tom')",
+            "example_result": "TOM"
+        },
+        {
+            "function_signature": "upper(anyrange) → anyelement",
+            "description": "Extracts the upper bound of the range (returns NULL if the range is empty or the upper bound is infinite)",
+            "example": "upper(numrange(1.1,2.2))",
+            "example_result": "2.2"
+        }
+    ],
+    "ascii": [
+        {
+            "function_signature": "ascii(text)",
+            "description": "Return the ASCII code of the first character of the argument.",
+            "example": "ascii('x')",
+            "example_result": "120"
+        }
+    ],
+    "btrim": [
+        {
+            "function_signature": "btrim(string text [, characters text])",
+            "description": "Remove the longest string containing only characters (default is whitespace) from both ends of the string.",
+            "example": "btrim('xyxtrimyyx','xy')",
+            "example_result": "trim"
+        }
+    ],
+    "chr": [
+        {
+            "function_signature": "chr(int)",
+            "description": "Return the character with the given ASCII code.",
+            "example": "chr(65)",
+            "example_result": "A"
+        }
+    ],
+    "initcap": [
+        {
+            "function_signature": "initcap(text)",
+            "description": "Capitalize the first letter of each word and convert the rest to lowercase. Words are alphanumeric sequences separated by non-alphanumeric characters.",
+            "example": "initcap('hi thomas')",
+            "example_result": "Hi Thomas"
+        }
+    ],
+    "length": [
+        {
+            "function_signature": "length(string text)",
+            "description": "Return the number of characters in a string.",
+            "example": "length('jose')",
+            "example_result": "4"
+        }
+    ],
+    "lpad": [
+        {
+            "function_signature": "lpad(string text, length int [, fill text])",
+            "description": "Pad the string on the left with fill characters (default is whitespace) to reach the given length, truncating on the right if longer.",
+            "example": "lpad('hi', 5, 'xy')",
+            "example_result": "xyxhi"
+        }
+    ],
+    "ltrim": [
+        {
+            "function_signature": "ltrim(string text [, characters text])",
+            "description": "Remove the longest string consisting only of characters (default is whitespace) from the start of the string.",
+            "example": "ltrim('zzzytrim','xyz')",
+            "example_result": "trim"
+        }
+    ],
+    "md5": [
+        {
+            "function_signature": "md5(string text)",
+            "description": "Compute the MD5 hash of the given string and return the result in hexadecimal.",
+            "example": "md5('abc')",
+            "example_result": null
+        }
+    ],
+    "repeat": [
+        {
+            "function_signature": "repeat(string text, number int)",
+            "description": "Repeat the string a specified number of times.",
+            "example": "repeat('Pg', 4)",
+            "example_result": "PgPgPgPg"
+        }
+    ],
+    "replace": [
+        {
+            "function_signature": "replace(string text, from text, to text)",
+            "description": "Replace all occurrences of substring 'from' with substring 'to' in the string.",
+            "example": "replace('abcdefabcdef', 'cd', 'XX')",
+            "example_result": "abXXefabXXef"
+        }
+    ],
+    "rpad": [
+        {
+            "function_signature": "rpad(string text, length int [, fill text])",
+            "description": "Pad the string on the right with fill characters (default is whitespace) to reach the given length, truncating if longer.",
+            "example": "rpad('hi', 5, 'xy')",
+            "example_result": "hixyx"
+        }
+    ],
+    "rtrim": [
+        {
+            "function_signature": "rtrim(string text [, character text])",
+            "description": "Remove the longest string consisting only of the specified character (default is whitespace) from the end of the string.",
+            "example": "rtrim('trimxxxx','x')",
+            "example_result": "trim"
+        }
+    ],
+    "split_part": [
+        {
+            "function_signature": "split_part(string text, delimiter text, field int)",
+            "description": "Split string by delimiter and return the specified field (1-based).",
+            "example": "split_part('abc~@~def~@~ghi', '~@~', 2)",
+            "example_result": "def"
+        }
+    ],
+    "strpos": [
+        {
+            "function_signature": "strpos(string, substring)",
+            "description": "Return the position of the specified substring.",
+            "example": "strpos('high','ig')",
+            "example_result": "2"
+        }
+    ],
+    "substr": [
+        {
+            "function_signature": "substr(string, from [, count])",
+            "description": "Extract a substring.",
+            "example": "substr('alphabet', 3, 2)",
+            "example_result": "ph"
+        }
+    ],
+    "to_ascii": [
+        {
+            "function_signature": "to_ascii(text [, encoding])",
+            "description": "Convert text from another encoding to ASCII.",
+            "example": "to_ascii('Karel')",
+            "example_result": "Karel"
+        }
+    ],
+    "to_hex": [
+        {
+            "function_signature": "to_hex(number int/bigint)",
+            "description": "Convert a number to its hexadecimal representation.",
+            "example": "to_hex(9223372036854775807)",
+            "example_result": "7fffffffffffffff"
+        }
+    ],
+    "translate": [
+        {
+            "function_signature": "translate(string text, from text, to text)",
+            "description": "Translate characters in the string by replacing each character in 'from' with the corresponding character in 'to'.",
+            "example": "translate('12345', '14', 'ax')",
+            "example_result": "a23x5"
+        }
+    ],
+    "to_char": [
+        {
+            "function_signature": "to_char(timestamp, text)",
+            "description": "Convert a timestamp to a string.",
+            "example": "to_char(current_timestamp, 'HH12:MI:SS')",
+            "example_result": null
+        },
+        {
+            "function_signature": "to_char(interval, text)",
+            "description": "Convert an interval to a string.",
+            "example": "to_char(interval '15h 2m 12s', 'HH24:MI:SS')",
+            "example_result": null
+        },
+        {
+            "function_signature": "to_char(int, text)",
+            "description": "Convert an integer to a string.",
+            "example": "to_char(125, '999')",
+            "example_result": null
+        },
+        {
+            "function_signature": "to_char(double precision, text)",
+            "description": "Convert a double precision number to a string.",
+            "example": "to_char(125.8::real, '999D9')",
+            "example_result": null
+        },
+        {
+            "function_signature": "to_char(numeric, text)",
+            "description": "Convert a numeric value to a string.",
+            "example": "to_char(-125.8, '999D99S')",
+            "example_result": null
+        }
+    ],
+    "to_date": [
+        {
+            "function_signature": "to_date(text, text)",
+            "description": "Convert a string to a date.",
+            "example": "to_date('05 Dec 2000', 'DD Mon YYYY')",
+            "example_result": null
+        }
+    ],
+    "to_number": [
+        {
+            "function_signature": "to_number(text, text)",
+            "description": "Convert a string to a numeric value.",
+            "example": "to_number('12,454.8-', '99G999D9S')",
+            "example_result": null
+        }
+    ],
+    "to_timestamp": [
+        {
+            "function_signature": "to_timestamp(text, text)",
+            "description": "Convert string to timestamp in the specified format.",
+            "example": "to_timestamp('05 Dec 2000', 'DD Mon YYYY')",
+            "example_result": null
+        },
+        {
+            "function_signature": "to_timestamp(double precision)",
+            "description": "Convert UNIX epoch to timestamp.",
+            "example": "to_timestamp(1284352323)",
+            "example_result": null
+        }
+    ],
+    "age": [
+        {
+            "function_signature": "age(timestamp, timestamp)",
+            "description": "Subtracts arguments, producing a 'symbolic' result that uses years and months, rather than just days",
+            "example": "age(timestamp '2001-04-10', timestamp '1957-06-13')",
+            "example_result": "43 years 9 mons 27 days"
+        },
+        {
+            "function_signature": "age(timestamp)",
+            "description": "Subtract from current_date (at midnight)",
+            "example": "age(timestamp '1957-06-13')",
+            "example_result": "43 years 8 mons 3 days"
+        }
+    ],
+    "clock_timestamp": [
+        {
+            "function_signature": "clock_timestamp()",
+            "description": "Current date and time (changes during statement execution)",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "current_date": [
+        {
+            "function_signature": "current_date",
+            "description": "Current date",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "current_time": [
+        {
+            "function_signature": "current_time",
+            "description": "Current time of day",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "current_timestamp": [
+        {
+            "function_signature": "current_timestamp",
+            "description": "Current date and time (start of current transaction)",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "date_part": [
+        {
+            "function_signature": "date_part(text, timestamp)",
+            "description": "Get subfield (equivalent to extract)",
+            "example": "date_part('hour', timestamp '2001-02-16 20:38:40')",
+            "example_result": "20"
+        },
+        {
+            "function_signature": "date_part(text, interval)",
+            "description": "Get subfield (equivalent to extract)",
+            "example": "date_part('month', interval '2 years 3 months')",
+            "example_result": "3"
+        }
+    ],
+    "date_trunc": [
+        {
+            "function_signature": "date_trunc(text, timestamp)",
+            "description": "Truncate to specified precision",
+            "example": "date_trunc('hour', timestamp '2001-02-16 20:38:40')",
+            "example_result": "2001-02-16 20:00:00"
+        },
+        {
+            "function_signature": "date_trunc(text, interval)",
+            "description": "Truncate to specified precision",
+            "example": "date_trunc('hour', interval '2 days 3 hours 40 minutes')",
+            "example_result": "2 days 03:00:00"
+        }
+    ],
+    "extract": [
+        {
+            "function_signature": "extract(field from timestamp)",
+            "description": "Get subfield",
+            "example": "extract(hour from timestamp '2001-02-16 20:38:40')",
+            "example_result": "20"
+        },
+        {
+            "function_signature": "extract(field from interval)",
+            "description": "Get subfield",
+            "example": "extract(month from interval '2 years 3 months')",
+            "example_result": "3"
+        }
+    ],
+    "isfinite": [
+        {
+            "function_signature": "isfinite(date)",
+            "description": "Test for finite date (not +/-infinity)",
+            "example": "isfinite(date '2001-02-16')",
+            "example_result": "true"
+        },
+        {
+            "function_signature": "isfinite(timestamp)",
+            "description": "Test for finite timestamp (not +/-infinity)",
+            "example": "isfinite(timestamp '2001-02-16 21:28:30')",
+            "example_result": "true"
+        },
+        {
+            "function_signature": "isfinite(interval)",
+            "description": "Test for finite interval",
+            "example": "isfinite(interval '4 hours')",
+            "example_result": "true"
+        }
+    ],
+    "justify_days": [
+        {
+            "function_signature": "justify_days(interval)",
+            "description": "Adjust interval so 30-day time periods are represented as months",
+            "example": "justify_days(interval '35 days')",
+            "example_result": "1 mon 5 days"
+        }
+    ],
+    "justify_hours": [
+        {
+            "function_signature": "justify_hours(interval)",
+            "description": "Adjust interval so 24-hour time periods are represented as days",
+            "example": "justify_hours(interval '27 hours')",
+            "example_result": "1 day 03:00:00"
+        }
+    ],
+    "justify_interval": [
+        {
+            "function_signature": "justify_interval(interval)",
+            "description": "Adjust interval using justify_days and justify_hours, with additional sign adjustments",
+            "example": "justify_interval(interval '1 mon -1 hour')",
+            "example_result": "29 days 23:00:00"
+        }
+    ],
+    "localtime": [
+        {
+            "function_signature": "localtime",
+            "description": "Current time of day",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "localtimestamp": [
+        {
+            "function_signature": "localtimestamp",
+            "description": "Current date and time (start of current transaction)",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "make_date": [
+        {
+            "function_signature": "make_date(year int, month int, day int)",
+            "description": "Create date from year, month, and day fields",
+            "example": "make_date(2013, 7, 15)",
+            "example_result": "2013-07-15"
+        }
+    ],
+    "make_interval": [
+        {
+            "function_signature": "make_interval(years int DEFAULT 0, months int DEFAULT 0, weeks int DEFAULT 0, days int DEFAULT 0, hours int DEFAULT 0, mins int DEFAULT 0, secs double precision DEFAULT 0.0)",
+            "description": "Create interval from years, months, weeks, days, hours, minutes, and seconds fields",
+            "example": "make_interval(days := 10)",
+            "example_result": "10 days"
+        }
+    ],
+    "make_time": [
+        {
+            "function_signature": "make_time(hour int, min int, sec double precision)",
+            "description": "Create time from hour, minute, and second fields",
+            "example": "make_time(8, 15, 23.5)",
+            "example_result": "08:15:23.5"
+        }
+    ],
+    "make_timestamp": [
+        {
+            "function_signature": "make_timestamp(year int, month int, day int, hour int, min int, sec double precision)",
+            "description": "Create timestamp from year, month, day, hour, minute, and second fields",
+            "example": "make_timestamp(2013, 7, 15, 8, 15, 23.5)",
+            "example_result": "2013-07-15 08:15:23.5"
+        }
+    ],
+    "make_timestamptz": [
+        {
+            "function_signature": "make_timestamptz(year int, month int, day int, hour int, min int, sec double precision, [ timezone text ])",
+            "description": "Create timestamp with time zone from fields; if timezone is not specified, the current time zone is used",
+            "example": "make_timestamptz(2013, 7, 15, 8, 15, 23.5)",
+            "example_result": "2013-07-15 08:15:23.5+01"
+        }
+    ],
+    "now": [
+        {
+            "function_signature": "now()",
+            "description": "Current date and time (start of current transaction)",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "statement_timestamp": [
+        {
+            "function_signature": "statement_timestamp()",
+            "description": "Current date and time (changes during statement execution)",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "timeofday": [
+        {
+            "function_signature": "timeofday()",
+            "description": "Current date and time (like clock_timestamp) but as a text string",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "transaction_timestamp": [
+        {
+            "function_signature": "transaction_timestamp()",
+            "description": "Current date and time (start of current transaction)",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "row_number": [
+        {
+            "function_signature": "row_number() → bigint",
+            "description": "Returns the current row number within its partition, counting from 1.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "rank": [
+        {
+            "function_signature": "rank() → bigint",
+            "description": "Returns the rank of the current row, with gaps; that is, the row_number of the first peer in the group.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "dense_rank": [
+        {
+            "function_signature": "dense_rank() → bigint",
+            "description": "Returns the rank of the current row, without gaps; this function effectively counts peer groups.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "percent_rank": [
+        {
+            "function_signature": "percent_rank() → double precision",
+            "description": "Returns the relative rank of the current row, i.e., (rank - 1) / (total partition rows - 1). The value thus ranges from 0 to 1 inclusive.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "cume_dist": [
+        {
+            "function_signature": "cume_dist() → double precision",
+            "description": "Returns the cumulative distribution, i.e., (number of partition rows preceding or peer with current row) / (total partition rows). The value ranges from 1/N to 1.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "ntile": [
+        {
+            "function_signature": "ntile(num_buckets integer) → integer",
+            "description": "Returns an integer ranging from 1 to the argument value, dividing the partition as equally as possible.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "lag": [
+        {
+            "function_signature": "lag(value anyelement [, offset integer [, default anyelement]]) → anyelement",
+            "description": "Returns value evaluated at the row that is offset rows before the current row within the partition; if there is no such row, returns default (which must be of the same type as value). Both offset and default are evaluated with respect to the current row. If omitted, offset defaults to 1 and default to NULL.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "lead": [
+        {
+            "function_signature": "lead(value anyelement [, offset integer [, default anyelement]]) → anyelement",
+            "description": "Returns value evaluated at the row that is offset rows after the current row within the partition; if there is no such row, returns default (which must be of the same type as value). Both offset and default are evaluated with respect to the current row. If omitted, offset defaults to 1 and default to NULL.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "first_value": [
+        {
+            "function_signature": "first_value(value anyelement) → anyelement",
+            "description": "Returns value evaluated at the first row of the window frame.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "last_value": [
+        {
+            "function_signature": "last_value(value anyelement) → anyelement",
+            "description": "Returns value evaluated at the last row of the window frame.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "nth_value": [
+        {
+            "function_signature": "nth_value(value anyelement, n integer) → anyelement",
+            "description": "Returns value evaluated at the n-th row of the window frame (counting from 1); returns NULL if there is no such row.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "coalesce": [
+        {
+            "function_signature": "COALESCE(value [, ...])",
+            "description": "The COALESCE function returns the first of its arguments that is not null. Null is returned only if all arguments are null. It is often used to substitute a default value for null values when data is retrieved for display.",
+            "example": "SELECT COALESCE(description, short_description, '(none)')",
+            "example_result": "Returns description if not null, otherwise short_description if not null, otherwise '(none)'"
+        }
+    ],
+    "nullif": [
+        {
+            "function_signature": "NULLIF(value1, value2)",
+            "description": "NULLIF returns a null value if value1 equals value2; otherwise it returns value1. This can be used to perform the inverse operation of the COALESCE example.",
+            "example": "SELECT NULLIF(value, '(none)')",
+            "example_result": "Returns null if value is '(none)', otherwise returns value"
+        }
+    ],
+    "greatest": [
+        {
+            "function_signature": "GREATEST(value [, ...])",
+            "description": "The GREATEST function selects the largest value from an arbitrary list of expressions. NULL values in the list are ignored. The result will be NULL only if all expressions evaluate to NULL.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "least": [
+        {
+            "function_signature": "LEAST(value [, ...])",
+            "description": "The LEAST function selects the smallest value from an arbitrary list of expressions. NULL values in the list are ignored. The result will be NULL only if all expressions evaluate to NULL.",
+            "example": null,
+            "example_result": null
+        }
+    ],
+    "get_bit": [
+        {
+            "function_signature": "get_bit(bits bit, n integer) → integer",
+            "description": "Extracts the n-th bit from the bit string; the first (leftmost) bit is bit 0",
+            "example": "get_bit(B'101010101010101010', 6)",
+            "example_result": "1"
+        }
+    ],
+    "set_bit": [
+        {
+            "function_signature": "set_bit(bits bit, n integer, newvalue integer) → bit",
+            "description": "Sets the n-th bit in the bit string to newvalue; the first (leftmost) bit is bit 0",
+            "example": "set_bit(B'101010101010101010', 6, 0)",
+            "example_result": "101010001010101010"
+        }
+    ],
+    "enum_first": [
+        {
+            "function_signature": "enum_first(anyenum) → anyenum",
+            "description": "Returns the first value of the input enum type",
+            "example": "CREATE TYPE rainbow AS ENUM ('red', 'orange', 'yellow', 'green', 'blue', 'purple');\nenum_first(null::rainbow)",
+            "example_result": "red"
+        }
+    ],
+    "enum_last": [
+        {
+            "function_signature": "enum_last(anyenum) → anyenum",
+            "description": "Returns the last value of the input enum type",
+            "example": "CREATE TYPE rainbow AS ENUM ('red', 'orange', 'yellow', 'green', 'blue', 'purple');\nenum_last(null::rainbow)",
+            "example_result": "purple"
+        }
+    ],
+    "enum_range": [
+        {
+            "function_signature": "enum_range(anyenum) → anyarray",
+            "description": "Returns all values of the input enum type as an ordered array",
+            "example": "CREATE TYPE rainbow AS ENUM ('red', 'orange', 'yellow', 'green', 'blue', 'purple');\nenum_range(null::rainbow)",
+            "example_result": "{red,orange,yellow,green,blue,purple}"
+        },
+        {
+            "function_signature": "enum_range(anyenum, anyenum) → anyarray",
+            "description": "Returns the range between two given enum values as an array. The values must be from the same enum type. If the first argument is null, the result will start with the first value of the enum type. If the second argument is null, the result will end with the last value of the enum type.",
+            "example": "enum_range('orange'::rainbow, 'green'::rainbow)",
+            "example_result": "{orange,yellow,green}"
+        },
+        {
+            "function_signature": "enum_range(NULL, anyenum) → anyarray",
+            "description": "Returns the range from the first enum value to the specified value",
+            "example": "enum_range(NULL, 'green'::rainbow)",
+            "example_result": "{red,orange,yellow,green}"
+        },
+        {
+            "function_signature": "enum_range(anyenum, NULL) → anyarray",
+            "description": "Returns the range from the specified enum value to the last value of the enum type",
+            "example": "enum_range('orange'::rainbow, NULL)",
+            "example_result": "{orange,yellow,green,blue,purple}"
+        }
+    ],
+    "array_append": [
+        {
+            "function_signature": "array_append(anyarray, anyelement) → anyarray",
+            "description": "Appends an element to the end of an array (equivalent to the anyarray || anyelement operator)",
+            "example": "array_append(ARRAY[1,2], 3)",
+            "example_result": "{1,2,3}"
+        }
+    ],
+    "array_cat": [
+        {
+            "function_signature": "array_cat(anyarray, anyarray) → anyarray",
+            "description": "Concatenates two arrays (equivalent to the anyarray || anyarray operator)",
+            "example": "array_cat(ARRAY[1,2,3], ARRAY[4,5])",
+            "example_result": "{1,2,3,4,5}"
+        }
+    ],
+    "array_dims": [
+        {
+            "function_signature": "array_dims(anyarray) → text",
+            "description": "Returns a text representation of array's dimensions",
+            "example": "array_dims(ARRAY[[1,2,3], [4,5,6]])",
+            "example_result": "[1:2][1:3]"
+        }
+    ],
+    "array_fill": [
+        {
+            "function_signature": "array_fill(anyelement, integer[] [, integer[]]) → anyarray",
+            "description": "Returns an array filled with copies of the given value, with dimensions specified by the second argument. An optional third argument provides lower-bound values for each dimension (defaults to all 1).",
+            "example": "array_fill(11, ARRAY[2,3])",
+            "example_result": "{{11,11,11},{11,11,11}}"
+        },
+        {
+            "function_signature": "array_fill(anyelement, integer[], integer[]) → anyarray",
+            "description": "Returns an array filled with copies of the given value, with dimensions and lower bounds specified",
+            "example": "array_fill(7, ARRAY[3], ARRAY[2])",
+            "example_result": "[2:4]={7,7,7}"
+        }
+    ],
+    "array_length": [
+        {
+            "function_signature": "array_length(anyarray, integer) → integer",
+            "description": "Returns the length of the requested array dimension",
+            "example": "array_length(array[1,2,3], 1)",
+            "example_result": "3"
+        }
+    ],
+    "array_lower": [
+        {
+            "function_signature": "array_lower(anyarray, integer) → integer",
+            "description": "Returns the lower bound of the requested array dimension",
+            "example": "array_lower('[0:2]={1,2,3}'::integer[], 1)",
+            "example_result": "0"
+        }
+    ],
+    "array_ndims": [
+        {
+            "function_signature": "array_ndims(anyarray) → integer",
+            "description": "Returns the number of dimensions of the array",
+            "example": "array_ndims(ARRAY[[1,2,3], [4,5,6]])",
+            "example_result": "2"
+        }
+    ],
+    "array_position": [
+        {
+            "function_signature": "array_position(anyarray, anyelement [, integer]) → integer",
+            "description": "Returns the subscript of the first occurrence of the second argument in the array, or NULL if it's not present. If the third argument is given, the search begins at that subscript. The array must be one-dimensional. Comparison uses IS NOT DISTINCT FROM semantics, so NULL can be searched for.",
+            "example": "array_position(ARRAY['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'], 'mon')",
+            "example_result": "2"
+        }
+    ],
+    "array_positions": [
+        {
+            "function_signature": "array_positions(anyarray, anyelement) → integer[]",
+            "description": "Returns an array of subscripts of all occurrences of the second argument in the first argument array. The array must be one-dimensional. Comparison uses IS NOT DISTINCT FROM semantics, so NULL can be searched for. Returns NULL only if the array is NULL; returns an empty array if the value is not found in the array.",
+            "example": "array_positions(ARRAY['A','A','B','A'], 'A')",
+            "example_result": "{1,2,4}"
+        }
+    ],
+    "array_prepend": [
+        {
+            "function_signature": "array_prepend(anyelement, anyarray) → anyarray",
+            "description": "Prepends an element to the beginning of an array (equivalent to the anyelement || anyarray operator)",
+            "example": "array_prepend(1, ARRAY[2,3])",
+            "example_result": "{1,2,3}"
+        }
+    ],
+    "array_remove": [
+        {
+            "function_signature": "array_remove(anyarray, anyelement) → anyarray",
+            "description": "Removes all elements equal to the given value from the array. The array must be one-dimensional. Comparison uses IS NOT DISTINCT FROM semantics, so NULL can be removed.",
+            "example": "array_remove(ARRAY[1,2,3,2], 2)",
+            "example_result": "{1,3}"
+        }
+    ],
+    "array_replace": [
+        {
+            "function_signature": "array_replace(anyarray, anyelement, anyelement) → anyarray",
+            "description": "Replaces each array element equal to the second argument with the third argument",
+            "example": "array_replace(ARRAY[1,2,5,4], 5, 3)",
+            "example_result": "{1,2,3,4}"
+        }
+    ],
+    "array_to_string": [
+        {
+            "function_signature": "array_to_string(array anyarray, delimiter text [, null_string text]) → text",
+            "description": "Converts each array element to its text representation and concatenates the elements separated by the delimiter string. If null_string is given and not NULL, NULL array entries are represented by that string; otherwise, they are omitted.",
+            "example": "array_to_string(ARRAY[1, 2, 3, NULL, 5], ',', '*')",
+            "example_result": "1,2,3,*,5"
+        }
+    ],
+    "array_upper": [
+        {
+            "function_signature": "array_upper(anyarray, integer) → integer",
+            "description": "Returns the upper bound of the requested array dimension",
+            "example": "array_upper(ARRAY[1,8,3,7], 1)",
+            "example_result": "4"
+        }
+    ],
+    "cardinality": [
+        {
+            "function_signature": "cardinality(anyarray) → integer",
+            "description": "Returns the total number of elements in the array, or 0 if the array is empty",
+            "example": "cardinality(ARRAY[[1,2],[3,4]])",
+            "example_result": "4"
+        }
+    ],
+    "string_to_array": [
+        {
+            "function_signature": "string_to_array(string text, delimiter text [, null_string text]) → text[]",
+            "description": "Splits the string at occurrences of the delimiter and forms the remaining data into a text array. If delimiter is NULL, each character in the string will become a separate element in the array. If delimiter is an empty string, the string is treated as a single field. If null_string is given and not NULL, fields matching that string are converted to NULL entries.",
+            "example": "string_to_array('xx~~yy~~zz', '~~', 'yy')",
+            "example_result": "{xx,NULL,zz}"
+        }
+    ],
+    "unnest": [
+        {
+            "function_signature": "unnest(anyarray) → setof anyelement",
+            "description": "Expands an array to a set of rows",
+            "example": "unnest(ARRAY[1,2])",
+            "example_result": "1\n2"
+        },
+        {
+            "function_signature": "unnest(anyarray, anyarray [, ...]) → setof anyelement, anyelement [, ...]",
+            "description": "Expands multiple arrays (possibly of different types) to a set of rows. If the arrays aren't all the same length, shorter arrays are padded with NULLs. This is only allowed in the FROM clause of a query.",
+            "example": "select * from unnest(ARRAY[1,2], ARRAY['foo','bar','baz']) as x(a,b)",
+            "example_result": "a |  b\n---+-----\n1 | foo\n2 | bar\n  | baz"
+        }
+    ],
+    "isempty": [
+        {
+            "function_signature": "isempty(anyrange) → boolean",
+            "description": "Is the range empty?",
+            "example": "isempty(numrange(1.1,2.2))",
+            "example_result": "f"
+        }
+    ],
+    "lower_inc": [
+        {
+            "function_signature": "lower_inc(anyrange) → boolean",
+            "description": "Is the lower bound inclusive?",
+            "example": "lower_inc(numrange(1.1,2.2))",
+            "example_result": "t"
+        }
+    ],
+    "upper_inc": [
+        {
+            "function_signature": "upper_inc(anyrange) → boolean",
+            "description": "Is the upper bound inclusive?",
+            "example": "upper_inc(numrange(1.1,2.2))",
+            "example_result": "f"
+        }
+    ],
+    "lower_inf": [
+        {
+            "function_signature": "lower_inf(anyrange) → boolean",
+            "description": "Is the lower bound infinite?",
+            "example": "lower_inf('(,)'::daterange)",
+            "example_result": "t"
+        }
+    ],
+    "upper_inf": [
+        {
+            "function_signature": "upper_inf(anyrange) → boolean",
+            "description": "Is the upper bound infinite?",
+            "example": "upper_inf('(,)'::daterange)",
+            "example_result": "t"
+        }
+    ],
+    "range_merge": [
+        {
+            "function_signature": "range_merge(anyrange, anyrange) → anyrange",
+            "description": "Computes the smallest range that includes both given ranges",
+            "example": "range_merge('[1,2)'::int4range, '[3,4)'::int4range)",
+            "example_result": "[1,4)"
+        }
+    ]
+}
