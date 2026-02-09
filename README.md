@@ -10,6 +10,9 @@ A Multi-Agent Framework for Diverse and High-quality NL-to-PL/SQL Data Generatio
   - [Seed Generation](#seed-generation)
   - [Seed Expansion](#seed-expansion)
   - [Translation](#translation)
+- [Train](#train)
+  - [SFT Stage](#sft-stage)
+  - [RL Stage](#rl-stage)
 - [Experiments](#experiments)
   - [Natural Language to PL/SQL](#natural-language-to-plsql)
   - [Evaluation Scripts](#evaluation-scripts)
@@ -165,6 +168,34 @@ This script converts PL/SQL code from one database dialect to another (e.g., Ora
 ```bash
 python translation_main.py
 ```
+
+---
+
+## Train
+
+The training pipeline consists of two phases: Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL).
+
+### SFT Stage
+
+The Supervised Fine-Tuning stage is implemented using the LLama-Factory framework. This stage focuses on aligning the base model with high-quality PL/SQL instruction data to ensure syntactical correctness and adherence to instructions.
+
+### RL Stage
+
+The Reinforcement Learning stage utilizes the verl framework to further optimize the model's performance.
+
+The reward mechanism is designed to ensure execution correctness and semantic equivalence. The implementation includes the following key technical points (`train/verl/utils/reward_score/plfactory.py`):
+
+- Dual-Backend Support: The system supports both PostgreSQL and Oracle environments, handling connection pooling and dialect-specific execution logic.
+- Isolated Execution Environments:
+  - PostgreSQL: Utilizes template databases and the Copy-On-Write (COW) mechanism to rapidly spawn isolated worker databases for each evaluation task, ensuring high performance and data safety.
+  - Oracle: Manages isolated worker schemas (users), dynamically creating and dropping users to prevent state pollution between runs.
+- Execution-Based Verification:
+  - The system executes both the Generated Solution and the Ground Truth in fresh, restored database environments.
+  - It runs a series of "call statements" (test cases) against both versions.
+- Data-Driven Comparison:
+  - The results of the call statements are captured as Pandas DataFrames.
+  - The reward score (0.0 to 1.0) is calculated based on the ratio of test cases where the generated code's output exactly matches the ground truth's output.
+- Robustness: Includes mechanisms for connection retries (handling Oracle network instability), transaction rollbacks on failure, and automatic resource cleanup (dropping temporary databases/schemas) to prevent leaks.
 
 ---
 
